@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Text("Welcome to $days days of flutter "),
       ),
-      drawer: const Drawer(backgroundColor: Color.fromARGB(255, 143, 180, 245)),
+      drawer: const Drawer(),
     );
   }
 }
