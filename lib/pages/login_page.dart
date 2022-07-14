@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
       });
       await Future.delayed(const Duration(seconds: 1));
       await Navigator.pushNamed(context, MyRoutes.homeRoute);
-      setState(() {
+      setState(() { 
         changeLoginButton = false;
       });
     }
@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                       if (value!.isEmpty) {
                         return "Password can't be empty";
                       } else if (value.length < 6) {
-                        return "Password length should be more than 4";
+                        return "Password length should not be less than 6R";
                       }
 
                       return null;
