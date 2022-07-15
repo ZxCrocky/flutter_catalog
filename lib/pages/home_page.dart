@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/models/catalog.dart';
 
 import '../widgets/drawer.dart';
+import '../widgets/item_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,10 +15,12 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         title: const Text("CATALOG APP"),
       ),
-      body: Center(
-        child: Text("Welcome to $days days of flutter "),
-      ),
-      drawer:MyDrawer(),
+      body: ListView.builder(
+          itemCount: CatalogModel.items.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(item: CatalogModel.items[index],);
+          }),
+      drawer: MyDrawer(),
     );
   }
 }
