@@ -1,0 +1,31 @@
+{
+    "products":[
+        {
+        "id": 1,
+        "name": "iphone 12 Pro",
+        "description": "Apple iphone 12th generation",
+        "price": 999,
+        "color": "#33505a",
+        "image":
+            "https://images.unsplash.com/photo-1617997455403-41f333d44d5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aXBob25lJTIwMTIlMjBwcm8lMjBtYXh8ZW58MHx8MHx8&w=1000&q=80"
+        },
+        {
+            "id": 2,
+            "name": "Pixel 5",
+            "description": "google pixel phone 5th generation",
+            "price": 699,
+            "color": "#00ac51",
+            "image": "https://m-cdn.phonearena.com/images/review/4878-wide-two_1200/Google-Pixel-5-Review-Brilliant-but-outshined.jpg" 
+
+        },
+        {
+            "id": 3,
+            "name": "M1 Macbook air",
+            "description": "Apple Macbook air with apple silicon",
+            "price": 1099,
+            "color": "#e0bfae",
+            "image":"https://s.yimg.com/os/creatr-uploaded-images/2020-11/c8aea820-28a0-11eb-9f89-5ddd62987703"
+        }
+
+    ]
+}
