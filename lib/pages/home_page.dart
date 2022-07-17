@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-   // await Future.delayed(Duration(seconds: 2));
+    // await Future.delayed(Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
@@ -44,13 +44,27 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-            ? ListView.builder(
-                itemCount: CatalogModel.items.length,
+            ? GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 30,
+                  mainAxisSpacing: 16,
+                ),
+                itemCount: CatalogModel.items.length, //you put this yourself
                 itemBuilder: (context, index) {
-                  return ItemWidget(
-                    item: CatalogModel.items[index],
-                  );
-                })
+                  final item = CatalogModel.items[index];
+                  return Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: GridTile(
+                        child: Image.network(item.image),
+                        header: Text(item.name),
+                        footer: Text(
+                          item.price.toString(),
+                        ),
+                      ));
+                },
+              )
             : const Center(
                 child: CircularProgressIndicator(),
               ),
